@@ -2,7 +2,7 @@
   "name": "S.O.S. Servicios - Acceso QR",
   "short_name": "SOS QR",
   "description": "Acceso rápido al código QR institucional de S.O.S. Servicios para colaboradores",
-  "start_url": "qrpage.html",
+  "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",

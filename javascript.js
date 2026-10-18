@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Registro de Service Worker para PWA (offline e instalación)
   registerServiceWorker();
 
-  // 2. Inicialización de la página QR (qrpage.html)
+  // 2. Inicialización de la página QR (index.html)
   if (document.getElementById('qrcode')) {
     initQRPage();
   }
@@ -39,7 +39,7 @@ function registerServiceWorker() {
 }
 
 /* ============================================================
-   2. QR PAGE LOGIC (qrpage.html)
+   2. QR PAGE LOGIC (index.html)
    ============================================================ */
 const TARGET_FILE = 'tarjetapresentacion.html';
 let qrInstance = null;

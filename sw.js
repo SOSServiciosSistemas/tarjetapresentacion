@@ -1,8 +1,8 @@
 // Service Worker para SOS Servicios PWA
-const CACHE_NAME = 'sos-servicios-v1';
+const CACHE_NAME = 'sos-servicios-v2';
 const ASSETS_TO_CACHE = [
   './',
-  './qrpage.html',
+  './index.html',
   './tarjetapresentacion.html',
   './custom.css',
   './javascript.js',
@@ -58,9 +58,9 @@ self.addEventListener('fetch', (event) => {
           if (cachedResponse) {
             return cachedResponse;
           }
-          // Si es una navegación HTML, devolver qrpage.html por defecto
+          // Si es una navegación HTML, devolver index.html por defecto
           if (event.request.mode === 'navigate') {
-            return caches.match('./qrpage.html');
+            return caches.match('./index.html');
           }
         });
       })
