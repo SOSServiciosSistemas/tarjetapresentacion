@@ -757,19 +757,25 @@ body.tarjeta-screen .footer-copy {
 }
 
 #qrcode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 250px;
   height: 250px;
   border-radius: 12px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 #qrcode canvas, #qrcode img {
-  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100% !important;
   height: 100% !important;
+  border-radius: 8px;
+}
+
+#qrcode canvas[style*="display: none"] {
+  display: none !important;
 }
 
 .qr-scan-instruction {

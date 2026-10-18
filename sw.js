@@ -1,5 +1,5 @@
 // Service Worker para SOS Servicios PWA
-const CACHE_NAME = 'sos-servicios-v2';
+const CACHE_NAME = 'sos-servicios-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

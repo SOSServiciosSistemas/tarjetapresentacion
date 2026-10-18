@@ -91,8 +91,17 @@ function renderQRCode(url) {
       height: 250,
       colorDark: '#040d1a',
       colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H // Máximo nivel de corrección de error para escaneo instantáneo
+      correctLevel: QRCode.CorrectLevel.M // Nivel M (15%) para patrones nítidos, cuadros grandes y escaneo instantáneo
     });
+
+    // Asegurar que el canvas auxiliar quede oculto una vez generada la imagen
+    setTimeout(() => {
+      const canvas = qrContainer.querySelector('canvas');
+      const img = qrContainer.querySelector('img');
+      if (canvas && img && img.src && img.src.length > 50) {
+        canvas.style.display = 'none';
+      }
+    }, 50);
   } else {
     // Respaldo visual en caso de que la librería tarde en responder
     qrContainer.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}" alt="QR Code" width="250" height="250" style="display:block;border-radius:10px;" />`;
